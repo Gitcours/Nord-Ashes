@@ -14,7 +14,7 @@
 "balloonTextMargin": "10,10,11,36",
 "choiceMargin": "10,150,10,10",
 "scripts": {
-"init": "// this script is called when a new game is started or when a previous game is loaded\r\n// you can set here your variables that will be initialized even for old savegames\r\n\r\ncontrol P_PLAYER O_PLAYER\r\n\r\nswitch P_PLAYER\r\n\r\nset_player_scene P_PLAYER S_VILLAGE_EREIPIA"
+"init": "// this script is called when a new game is started or when a previous game is loaded\r\n// you can set here your variables that will be initialized even for old savegames\r\n"
 },
 "languages": {
 "english": "1",
@@ -129,33 +129,33 @@
 },
 "scenario": {
 "board": {
-"nextid": 44,
-"x": 256,
+"nextid": 74,
+"x": 57,
 "boxes": [
 {
 "type": 257,
 "id": 1,
 "name": "start",
-"x": 152,
-"y": 280,
+"x": -488,
+"y": 200,
 "plugs": [
 {
 "id": 2,
 "type": 3,
 "trgs": [
-18,
-42
+48
 ]
 }
 ],
-"exit": "// Assign an object to the player\r\ncontrol P_HERO O_HERO\r\n\r\n// Change the current player\r\nswitch P_HERO\r\n\r\n// Change the current scene\r\njump S_HOME"
+"exit": "control P_PLAYER O_PLAYER\r\n\r\nswitch P_PLAYER\r\n\r\njump S_VILLAGE_EREIPIA",
+"resolved": true
 },
 {
 "type": 260,
 "id": 3,
 "name": "end",
-"x": 1232,
-"y": 280,
+"x": 1992,
+"y": 200,
 "plugs": [
 {
 "id": 4,
@@ -168,8 +168,8 @@
 "id": 5,
 "name": "#Recuperer_le_premiere_objet",
 "value": "Recuperer_le_premiere_objet_sacrée",
-"x": 600,
-"y": 176,
+"x": 576,
+"y": 200,
 "plugs": [
 {
 "id": 6,
@@ -179,18 +179,19 @@
 "id": 7,
 "type": 3,
 "trgs": [
-33
+9
 ]
 }
-]
+],
+"resolved": true
 },
 {
 "type": 256,
 "id": 8,
 "name": "#Recuperer_le_deuxieme_objet",
 "value": "#Recuperer_le_deuxieme_objet_sacrée",
-"x": 592,
-"y": 280,
+"x": 920,
+"y": 200,
 "plugs": [
 {
 "id": 9,
@@ -200,18 +201,19 @@
 "id": 10,
 "type": 3,
 "trgs": [
-33
+12
 ]
 }
-]
+],
+"resolved": true
 },
 {
 "type": 256,
 "id": 11,
 "name": "#Recuperer_le_troisieme_objet",
 "value": "Recuperer_le_troisieme_objet_sacrée",
-"x": 600,
-"y": 376,
+"x": 1272,
+"y": 200,
 "plugs": [
 {
 "id": 12,
@@ -241,19 +243,18 @@
 "id": 19,
 "type": 3,
 "trgs": [
-6,
-9,
-12
+6
 ]
 }
-]
+],
+"resolved": true
 },
 {
 "type": 256,
 "id": 32,
-"name": "#et",
-"x": 952,
-"y": 280,
+"name": "#Fin_Velldran",
+"x": 1608,
+"y": 200,
 "plugs": [
 {
 "id": 33,
@@ -263,7 +264,7 @@
 "id": 34,
 "type": 3,
 "trgs": [
-4
+51
 ]
 }
 ]
@@ -272,8 +273,8 @@
 "type": 256,
 "id": 41,
 "name": "#soyez_mechant_avec_le_vielle_homme",
-"x": 256,
-"y": 384,
+"x": -176,
+"y": 280,
 "plugs": [
 {
 "id": 42,
@@ -283,10 +284,86 @@
 "id": 43,
 "type": 3,
 "trgs": [
-18
+70
+]
+}
+],
+"resolved": true
+},
+{
+"type": 258,
+"id": 47,
+"name": "#Village_de_velldran",
+"x": -368,
+"y": 200,
+"plugs": [
+{
+"id": 48,
+"type": 2
+},
+{
+"id": 49,
+"type": 3,
+"trgs": [
+69,
+42
+]
+}
+],
+"resolved": true
+},
+{
+"type": 262,
+"id": 50,
+"name": "#Village_de_velldran",
+"x": 1784,
+"y": 200,
+"plugs": [
+{
+"id": 51,
+"type": 2
+},
+{
+"id": 52,
+"type": 3,
+"trgs": [
+4
 ]
 }
 ]
+},
+{
+"type": 261,
+"id": 68,
+"name": "or",
+"x": 112,
+"y": 200,
+"plugs": [
+{
+"id": 69,
+"type": 2
+},
+{
+"id": 70,
+"type": 2
+},
+{
+"id": 71,
+"type": 3
+},
+{
+"id": 72,
+"type": 3
+},
+{
+"id": 73,
+"type": 3,
+"trgs": [
+18
+]
+}
+],
+"resolved": true
 }
 ]
 }
@@ -297,21 +374,21 @@
 "uid": "R_VILLAGE_EREIPIA",
 "graph": {
 "board": {
-"nextid": 175,
-"x": 1104,
-"y": -232,
+"nextid": 630,
+"x": 740,
+"y": -1427,
 "boxes": [
 {
 "type": 1285,
 "id": 9,
-"x": -448,
-"y": -170,
+"x": -698,
+"y": 1931,
 "plugs": [
 {
 "id": 10,
 "type": 3,
 "trgs": [
-15
+485
 ]
 }
 ],
@@ -322,8 +399,8 @@
 {
 "type": 788,
 "id": 11,
-"x": 431,
-"y": -128,
+"x": 205,
+"y": 1991,
 "plugs": [
 {
 "id": 12,
@@ -331,7 +408,10 @@
 },
 {
 "id": 13,
-"type": 3
+"type": 3,
+"trgs": [
+176
+]
 }
 ],
 "player": "P_PLAYER",
@@ -341,8 +421,8 @@
 {
 "type": 1031,
 "id": 14,
-"x": -285,
-"y": -169,
+"x": -335,
+"y": 1950,
 "plugs": [
 {
 "id": 15,
@@ -371,206 +451,10 @@
 "puzzle": "#Recuperer_le_premiere_objet"
 },
 {
-"type": 1285,
-"id": 31,
-"x": -449,
-"y": 25,
-"plugs": [
-{
-"id": 32,
-"type": 3,
-"trgs": [
-37
-]
-}
-],
-"varCmp": "==",
-"scene": "S_VILLAGE_EREIPIA"
-},
-{
-"type": 788,
-"id": 33,
-"x": 430,
-"y": 67,
-"plugs": [
-{
-"id": 34,
-"type": 2
-},
-{
-"id": 35,
-"type": 3
-}
-],
-"player": "P_PLAYER",
-"obj": "O_HOLYOBJ2",
-"silent": "False"
-},
-{
-"type": 1031,
-"id": 36,
-"x": -286,
-"y": 26,
-"plugs": [
-{
-"id": 37,
-"type": 2
-},
-{
-"id": 38,
-"type": 3
-},
-{
-"id": 39,
-"type": 3
-},
-{
-"id": 40,
-"type": 3,
-"trgs": [
-105
-]
-},
-{
-"id": 41,
-"type": 3
-}
-],
-"puzzle": "#Recuperer_le_deuxieme_objet"
-},
-{
-"type": 1285,
-"id": 42,
-"x": -449,
-"y": 220,
-"plugs": [
-{
-"id": 43,
-"type": 3,
-"trgs": [
-48
-]
-}
-],
-"varCmp": "==",
-"scene": "S_VILLAGE_EREIPIA"
-},
-{
-"type": 788,
-"id": 44,
-"x": 430,
-"y": 262,
-"plugs": [
-{
-"id": 45,
-"type": 2
-},
-{
-"id": 46,
-"type": 3
-}
-],
-"player": "P_PLAYER",
-"obj": "O_HOLYOBJ3",
-"silent": "False"
-},
-{
-"type": 1031,
-"id": 47,
-"x": -286,
-"y": 221,
-"plugs": [
-{
-"id": 48,
-"type": 2
-},
-{
-"id": 49,
-"type": 3
-},
-{
-"id": 50,
-"type": 3
-},
-{
-"id": 51,
-"type": 3,
-"trgs": [
-111
-]
-},
-{
-"id": 52,
-"type": 3
-}
-],
-"puzzle": "#Recuperer_le_troisieme_objet"
-},
-{
-"type": 780,
-"id": 53,
-"x": 201,
-"y": -128,
-"plugs": [
-{
-"id": 54,
-"type": 2
-},
-{
-"id": 55,
-"type": 3,
-"trgs": [
-12
-]
-}
-],
-"puzzle": "#Recuperer_le_premiere_objet"
-},
-{
-"type": 780,
-"id": 56,
-"x": 189,
-"y": 67,
-"plugs": [
-{
-"id": 57,
-"type": 2
-},
-{
-"id": 58,
-"type": 3,
-"trgs": [
-34
-]
-}
-],
-"puzzle": "#Recuperer_le_deuxieme_objet"
-},
-{
-"type": 780,
-"id": 59,
-"x": 186,
-"y": 262,
-"plugs": [
-{
-"id": 60,
-"type": 2
-},
-{
-"id": 61,
-"type": 3,
-"trgs": [
-45
-]
-}
-],
-"puzzle": "#Recuperer_le_troisieme_objet"
-},
-{
 "type": 1031,
 "id": 98,
-"x": -44,
-"y": -129,
+"x": -94,
+"y": 1990,
 "plugs": [
 {
 "id": 99,
@@ -580,7 +464,7 @@
 "id": 100,
 "type": 3,
 "trgs": [
-54
+12
 ]
 },
 {
@@ -599,74 +483,10 @@
 "puzzle": "#parler_avec_le_vielle_homme"
 },
 {
-"type": 1031,
-"id": 104,
-"x": -45,
-"y": 66,
-"plugs": [
-{
-"id": 105,
-"type": 2
-},
-{
-"id": 106,
-"type": 3,
-"trgs": [
-57
-]
-},
-{
-"id": 107,
-"type": 3
-},
-{
-"id": 108,
-"type": 3
-},
-{
-"id": 109,
-"type": 3
-}
-],
-"puzzle": "#parler_avec_le_vielle_homme"
-},
-{
-"type": 1031,
-"id": 110,
-"x": -45,
-"y": 261,
-"plugs": [
-{
-"id": 111,
-"type": 2
-},
-{
-"id": 112,
-"type": 3,
-"trgs": [
-60
-]
-},
-{
-"id": 113,
-"type": 3
-},
-{
-"id": 114,
-"type": 3
-},
-{
-"id": 115,
-"type": 3
-}
-],
-"puzzle": "#parler_avec_le_vielle_homme"
-},
-{
 "type": 781,
 "id": 145,
-"x": -148,
-"y": 420,
+"x": -197,
+"y": 514,
 "plugs": [
 {
 "id": 146,
@@ -683,8 +503,8 @@
 {
 "type": 257,
 "id": 150,
-"x": -418,
-"y": 422,
+"x": -467,
+"y": 516,
 "plugs": [
 {
 "id": 151,
@@ -693,13 +513,14 @@
 153
 ]
 }
-]
+],
+"script": "set intPuzzle 0\r\n\r\nset boolCanpass false"
 },
 {
 "type": 265,
 "id": 152,
-"x": -297,
-"y": 421,
+"x": -346,
+"y": 515,
 "plugs": [
 {
 "id": 153,
@@ -717,8 +538,8 @@
 {
 "type": 1287,
 "id": 155,
-"x": -477,
-"y": 652,
+"x": -501,
+"y": 767,
 "plugs": [
 {
 "id": 156,
@@ -735,8 +556,8 @@
 {
 "type": 781,
 "id": 157,
-"x": 386,
-"y": 731,
+"x": 362,
+"y": 846,
 "plugs": [
 {
 "id": 158,
@@ -753,8 +574,8 @@
 {
 "type": 1031,
 "id": 160,
-"x": -279,
-"y": 651,
+"x": -303,
+"y": 766,
 "plugs": [
 {
 "id": 161,
@@ -785,8 +606,8 @@
 {
 "type": 1031,
 "id": 166,
-"x": 69,
-"y": 692,
+"x": 45,
+"y": 807,
 "plugs": [
 {
 "id": 167,
@@ -820,8 +641,8 @@
 {
 "type": 781,
 "id": 172,
-"x": 379,
-"y": 608,
+"x": 355,
+"y": 723,
 "plugs": [
 {
 "id": 173,
@@ -834,6 +655,978 @@
 ],
 "dialog": "D_OLD_MAN",
 "sentence": "39"
+},
+{
+"type": 781,
+"id": 175,
+"x": 367,
+"y": 1992,
+"plugs": [
+{
+"id": 176,
+"type": 2
+},
+{
+"id": 177,
+"type": 3
+}
+],
+"dialog": "D_PLAYER",
+"sentence": "3"
+},
+{
+"type": 1290,
+"id": 185,
+"x": -720,
+"y": 1160,
+"plugs": [
+{
+"id": 186,
+"type": 3,
+"trgs": [
+622
+]
+}
+],
+"varCmp": "==",
+"obj": "O_OLD_MAN",
+"obj2": "O_HOLYOBJ1"
+},
+{
+"type": 1031,
+"id": 187,
+"x": -330,
+"y": 1162,
+"plugs": [
+{
+"id": 188,
+"type": 2
+},
+{
+"id": 189,
+"type": 3,
+"trgs": [
+194
+]
+},
+{
+"id": 190,
+"type": 3
+},
+{
+"id": 191,
+"type": 3,
+"trgs": [
+197
+]
+},
+{
+"id": 192,
+"type": 3
+}
+],
+"puzzle": "#soyez_mechant_avec_le_vielle_homme"
+},
+{
+"type": 781,
+"id": 193,
+"x": 13,
+"y": 1121,
+"plugs": [
+{
+"id": 194,
+"type": 2
+},
+{
+"id": 195,
+"type": 3,
+"trgs": [
+455
+]
+}
+],
+"dialog": "D_OLD_MAN",
+"sentence": "92"
+},
+{
+"type": 781,
+"id": 196,
+"x": 15,
+"y": 1228,
+"plugs": [
+{
+"id": 197,
+"type": 2
+},
+{
+"id": 198,
+"type": 3,
+"trgs": [
+455
+]
+}
+],
+"dialog": "D_OLD_MAN",
+"sentence": "87"
+},
+{
+"type": 1290,
+"id": 219,
+"x": -707,
+"y": 1458,
+"plugs": [
+{
+"id": 220,
+"type": 3,
+"trgs": [
+625
+]
+}
+],
+"varCmp": "==",
+"obj": "O_OLD_MAN",
+"obj2": "O_HOLYOBJ2"
+},
+{
+"type": 1031,
+"id": 221,
+"x": -322,
+"y": 1460,
+"plugs": [
+{
+"id": 222,
+"type": 2
+},
+{
+"id": 223,
+"type": 3,
+"trgs": [
+228
+]
+},
+{
+"id": 224,
+"type": 3
+},
+{
+"id": 225,
+"type": 3,
+"trgs": [
+231
+]
+},
+{
+"id": 226,
+"type": 3
+}
+],
+"puzzle": "#soyez_mechant_avec_le_vielle_homme"
+},
+{
+"type": 781,
+"id": 227,
+"x": 21,
+"y": 1419,
+"plugs": [
+{
+"id": 228,
+"type": 2
+},
+{
+"id": 229,
+"type": 3,
+"trgs": [
+461
+]
+}
+],
+"dialog": "D_OLD_MAN",
+"sentence": "98"
+},
+{
+"type": 781,
+"id": 230,
+"x": 23,
+"y": 1526,
+"plugs": [
+{
+"id": 231,
+"type": 2
+},
+{
+"id": 232,
+"type": 3,
+"trgs": [
+461
+]
+}
+],
+"dialog": "D_OLD_MAN",
+"sentence": "95"
+},
+{
+"type": 1285,
+"id": 239,
+"x": -651,
+"y": 2242,
+"plugs": [
+{
+"id": 240,
+"type": 3,
+"trgs": [
+473
+]
+}
+],
+"varCmp": "==",
+"scene": "S_VILLAGE_EREIPIA",
+"label": "HOUSE"
+},
+{
+"type": 788,
+"id": 241,
+"x": 463,
+"y": 2303,
+"plugs": [
+{
+"id": 242,
+"type": 2
+},
+{
+"id": 243,
+"type": 3,
+"trgs": [
+260
+]
+}
+],
+"player": "P_PLAYER",
+"obj": "O_HOLYOBJ2",
+"silent": "False"
+},
+{
+"type": 1031,
+"id": 244,
+"x": -328,
+"y": 2263,
+"plugs": [
+{
+"id": 245,
+"type": 2
+},
+{
+"id": 246,
+"type": 3
+},
+{
+"id": 247,
+"type": 3
+},
+{
+"id": 248,
+"type": 3,
+"trgs": [
+254
+]
+},
+{
+"id": 249,
+"type": 3
+}
+],
+"puzzle": "#Recuperer_le_deuxieme_objet"
+},
+{
+"type": 780,
+"id": 250,
+"x": 233,
+"y": 2303,
+"plugs": [
+{
+"id": 251,
+"type": 2
+},
+{
+"id": 252,
+"type": 3,
+"trgs": [
+242
+]
+}
+],
+"puzzle": "#Recuperer_le_deuxieme_objet"
+},
+{
+"type": 1031,
+"id": 253,
+"x": -43,
+"y": 2303,
+"plugs": [
+{
+"id": 254,
+"type": 2
+},
+{
+"id": 255,
+"type": 3,
+"trgs": [
+251
+]
+},
+{
+"id": 256,
+"type": 3
+},
+{
+"id": 257,
+"type": 3
+},
+{
+"id": 258,
+"type": 3
+}
+],
+"puzzle": "#Recuperer_le_premiere_objet"
+},
+{
+"type": 781,
+"id": 259,
+"x": 625,
+"y": 2304,
+"plugs": [
+{
+"id": 260,
+"type": 2
+},
+{
+"id": 261,
+"type": 3
+}
+],
+"dialog": "D_PLAYER",
+"sentence": "3"
+},
+{
+"type": 1287,
+"id": 262,
+"x": -647,
+"y": 2542,
+"plugs": [
+{
+"id": 263,
+"type": 3,
+"trgs": [
+610
+]
+}
+],
+"varCmp": "==",
+"scene": "S_VILLAGE_EREIPIA",
+"obj": "O_GUARD"
+},
+{
+"type": 788,
+"id": 282,
+"x": 704,
+"y": 2509,
+"plugs": [
+{
+"id": 283,
+"type": 2
+},
+{
+"id": 284,
+"type": 3
+}
+],
+"player": "P_PLAYER",
+"obj": "O_HOLYOBJ3",
+"silent": "False"
+},
+{
+"type": 1031,
+"id": 285,
+"x": -298,
+"y": 2561,
+"plugs": [
+{
+"id": 286,
+"type": 2
+},
+{
+"id": 287,
+"type": 3
+},
+{
+"id": 288,
+"type": 3
+},
+{
+"id": 289,
+"type": 3,
+"trgs": [
+295
+]
+},
+{
+"id": 290,
+"type": 3
+}
+],
+"puzzle": "#Recuperer_le_troisieme_objet"
+},
+{
+"type": 780,
+"id": 291,
+"x": 454,
+"y": 2508,
+"plugs": [
+{
+"id": 292,
+"type": 2
+},
+{
+"id": 293,
+"type": 3,
+"trgs": [
+283
+]
+}
+],
+"puzzle": "#Recuperer_le_troisieme_objet"
+},
+{
+"type": 1031,
+"id": 294,
+"x": -57,
+"y": 2601,
+"plugs": [
+{
+"id": 295,
+"type": 2
+},
+{
+"id": 296,
+"type": 3,
+"trgs": [
+313
+]
+},
+{
+"id": 297,
+"type": 3
+},
+{
+"id": 298,
+"type": 3,
+"trgs": [
+310
+]
+},
+{
+"id": 299,
+"type": 3
+}
+],
+"puzzle": "#Recuperer_le_deuxieme_objet"
+},
+{
+"type": 781,
+"id": 309,
+"x": 230,
+"y": 2641,
+"plugs": [
+{
+"id": 310,
+"type": 2
+},
+{
+"id": 311,
+"type": 3
+}
+],
+"dialog": "D_GUARD",
+"sentence": "4"
+},
+{
+"type": 781,
+"id": 312,
+"x": 218,
+"y": 2509,
+"plugs": [
+{
+"id": 313,
+"type": 2
+},
+{
+"id": 314,
+"type": 3,
+"trgs": [
+292
+]
+}
+],
+"dialog": "D_GUARD",
+"sentence": "10"
+},
+{
+"type": 1285,
+"id": 338,
+"x": -493,
+"y": 2866,
+"plugs": [
+{
+"id": 339,
+"type": 3,
+"trgs": [
+344
+]
+}
+],
+"varCmp": "==",
+"scene": "S_VILLAGE_EREIPIA",
+"label": "NEXT_SCENE"
+},
+{
+"type": 1031,
+"id": 343,
+"x": -306,
+"y": 2867,
+"plugs": [
+{
+"id": 344,
+"type": 2
+},
+{
+"id": 345,
+"type": 3,
+"trgs": [
+362
+]
+},
+{
+"id": 346,
+"type": 3
+},
+{
+"id": 347,
+"type": 3
+},
+{
+"id": 348,
+"type": 3
+}
+],
+"puzzle": "#Fin_Velldran"
+},
+{
+"type": 775,
+"id": 361,
+"x": -134,
+"y": 2867,
+"plugs": [
+{
+"id": 362,
+"type": 2
+},
+{
+"id": 363,
+"type": 3
+}
+],
+"scene": "S_FORET_DE_VALNOIR",
+"durationOut": "100",
+"durationWait": "0",
+"durationIn": "0"
+},
+{
+"type": 1290,
+"id": 364,
+"x": -707,
+"y": 1731,
+"plugs": [
+{
+"id": 365,
+"type": 3,
+"trgs": [
+628
+]
+}
+],
+"varCmp": "==",
+"obj": "O_OLD_MAN",
+"obj2": "O_HOLYOBJ3"
+},
+{
+"type": 1031,
+"id": 366,
+"x": -319,
+"y": 1731,
+"plugs": [
+{
+"id": 367,
+"type": 2
+},
+{
+"id": 368,
+"type": 3,
+"trgs": [
+373
+]
+},
+{
+"id": 369,
+"type": 3
+},
+{
+"id": 370,
+"type": 3,
+"trgs": [
+376
+]
+},
+{
+"id": 371,
+"type": 3
+}
+],
+"puzzle": "#soyez_mechant_avec_le_vielle_homme"
+},
+{
+"type": 781,
+"id": 372,
+"x": 24,
+"y": 1690,
+"plugs": [
+{
+"id": 373,
+"type": 2
+},
+{
+"id": 374,
+"type": 3,
+"trgs": [
+467
+]
+}
+],
+"dialog": "D_OLD_MAN",
+"sentence": "102"
+},
+{
+"type": 781,
+"id": 375,
+"x": 26,
+"y": 1797,
+"plugs": [
+{
+"id": 376,
+"type": 2
+},
+{
+"id": 377,
+"type": 3,
+"trgs": [
+467
+]
+}
+],
+"dialog": "D_OLD_MAN",
+"sentence": "100"
+},
+{
+"type": 780,
+"id": 451,
+"x": 459,
+"y": 1186,
+"plugs": [
+{
+"id": 452,
+"type": 2
+},
+{
+"id": 453,
+"type": 3
+}
+],
+"puzzle": "#Recuperer_le_premiere_objet"
+},
+{
+"type": 260,
+"id": 454,
+"x": 279,
+"y": 1187,
+"plugs": [
+{
+"id": 455,
+"type": 2
+},
+{
+"id": 456,
+"type": 3,
+"trgs": [
+452
+]
+}
+]
+},
+{
+"type": 780,
+"id": 457,
+"x": 476,
+"y": 1470,
+"plugs": [
+{
+"id": 458,
+"type": 2
+},
+{
+"id": 459,
+"type": 3
+}
+],
+"puzzle": "#Recuperer_le_deuxieme_objet"
+},
+{
+"type": 260,
+"id": 460,
+"x": 296,
+"y": 1471,
+"plugs": [
+{
+"id": 461,
+"type": 2
+},
+{
+"id": 462,
+"type": 3,
+"trgs": [
+458
+]
+}
+]
+},
+{
+"type": 780,
+"id": 463,
+"x": 380,
+"y": 1738,
+"plugs": [
+{
+"id": 464,
+"type": 2
+},
+{
+"id": 465,
+"type": 3,
+"trgs": [
+470
+]
+}
+],
+"puzzle": "#Recuperer_le_troisieme_objet"
+},
+{
+"type": 260,
+"id": 466,
+"x": 241,
+"y": 1739,
+"plugs": [
+{
+"id": 467,
+"type": 2
+},
+{
+"id": 468,
+"type": 3,
+"trgs": [
+464
+]
+}
+]
+},
+{
+"type": 780,
+"id": 469,
+"x": 634,
+"y": 1738,
+"plugs": [
+{
+"id": 470,
+"type": 2
+},
+{
+"id": 471,
+"type": 3
+}
+],
+"puzzle": "#Fin_Velldran"
+},
+{
+"type": 513,
+"id": 472,
+"x": -474,
+"y": 2243,
+"plugs": [
+{
+"id": 473,
+"type": 2
+},
+{
+"id": 474,
+"type": 3
+},
+{
+"id": 600,
+"type": 3,
+"trgs": [
+245
+]
+}
+],
+"script": "if var intPuzzle 1\r\n\tset intPuzzle 2\r\n\tout 1\r\nend",
+"plugCount": 2
+},
+{
+"type": 513,
+"id": 484,
+"x": -512,
+"y": 1931,
+"plugs": [
+{
+"id": 485,
+"type": 2
+},
+{
+"id": 486,
+"type": 3
+},
+{
+"id": 591,
+"type": 3,
+"trgs": [
+15
+]
+}
+],
+"script": "if var intPuzzle 0\r\n\tset intPuzzle 1\r\n\tout 1\r\nend",
+"plugCount": 2
+},
+{
+"type": 513,
+"id": 609,
+"x": -475,
+"y": 2541,
+"plugs": [
+{
+"id": 610,
+"type": 2
+},
+{
+"id": 611,
+"type": 3
+},
+{
+"id": 612,
+"type": 3,
+"trgs": [
+286
+]
+}
+],
+"script": "if var intPuzzle 2\r\n\tset intPuzzle 3\r\n\tout 1\r\nend",
+"plugCount": 2
+},
+{
+"type": 788,
+"id": 621,
+"x": -538,
+"y": 1161,
+"plugs": [
+{
+"id": 622,
+"type": 2
+},
+{
+"id": 623,
+"type": 3,
+"trgs": [
+188
+]
+}
+],
+"player": "DUMP",
+"obj": "O_HOLYOBJ1",
+"silent": "False"
+},
+{
+"type": 788,
+"id": 624,
+"x": -522,
+"y": 1459,
+"plugs": [
+{
+"id": 625,
+"type": 2
+},
+{
+"id": 626,
+"type": 3,
+"trgs": [
+222
+]
+}
+],
+"player": "DUMP",
+"obj": "O_HOLYOBJ2",
+"silent": "False"
+},
+{
+"type": 788,
+"id": 627,
+"x": -518,
+"y": 1731,
+"plugs": [
+{
+"id": 628,
+"type": 2
+},
+{
+"id": 629,
+"type": 3,
+"trgs": [
+367
+]
+}
+],
+"player": "DUMP",
+"obj": "O_HOLYOBJ3",
+"silent": "False"
+}
+]
+}
+}
+},
+{
+"sid": 21,
+"uid": "R_FORET_DE_VALNOIR",
+"graph": {
+"board": {
+"nextid": 9,
+"x": 416,
+"y": 205,
+"boxes": [
+{
+"type": 257,
+"id": 1,
+"x": -146,
+"y": 69,
+"plugs": [
+{
+"id": 2,
+"type": 3
+}
+]
 }
 ]
 }
@@ -914,8 +1707,8 @@
 "opacitySpeed": 100
 }
 },
-"zoom": 80,
-"nextID": 189,
+"zoom": 10,
+"nextID": 192,
 "x": -298,
 "y": -78,
 "role": "R_VILLAGE_EREIPIA"
@@ -31306,7 +32099,10 @@
 },
 {
 "col": 192,
-"row": 105
+"row": 105,
+"linkSelLabel": {
+"label": "CHURCH"
+}
 },
 {
 "col": 188,
@@ -43938,7 +44734,10 @@
 },
 {
 "col": 130,
-"row": 24
+"row": 24,
+"linkSelObj": {
+"obj": "O_GUARD"
+}
 },
 {
 "col": 130,
@@ -44481,6 +45280,877 @@
 {
 "col": 41,
 "row": 117
+},
+{
+"col": 262,
+"row": 206
+},
+{
+"col": 262,
+"row": 207
+},
+{
+"col": 263,
+"row": 206
+},
+{
+"col": 263,
+"row": 207
+},
+{
+"col": 264,
+"row": 207
+},
+{
+"col": 264,
+"row": 208
+},
+{
+"col": 265,
+"row": 208
+},
+{
+"col": 266,
+"row": 209
+},
+{
+"col": 267,
+"row": 209
+},
+{
+"col": 267,
+"row": 210
+},
+{
+"col": 268,
+"row": 210
+},
+{
+"col": 269,
+"row": 210
+},
+{
+"col": 269,
+"row": 211
+},
+{
+"col": 270,
+"row": 211
+},
+{
+"col": 270,
+"row": 212
+},
+{
+"col": 271,
+"row": 211
+},
+{
+"col": 271,
+"row": 212
+},
+{
+"col": 272,
+"row": 212
+},
+{
+"col": 272,
+"row": 213
+},
+{
+"col": 273,
+"row": 212
+},
+{
+"col": 273,
+"row": 213
+},
+{
+"col": 274,
+"row": 212
+},
+{
+"col": 274,
+"row": 213
+},
+{
+"col": 275,
+"row": 213
+},
+{
+"col": 276,
+"row": 213
+},
+{
+"col": 271,
+"row": 213
+},
+{
+"col": 270,
+"row": 213
+},
+{
+"col": 268,
+"row": 209
+},
+{
+"col": 266,
+"row": 208
+},
+{
+"col": 265,
+"row": 207
+},
+{
+"col": 266,
+"row": 207
+},
+{
+"col": 261,
+"row": 207
+},
+{
+"col": 259,
+"row": 206
+},
+{
+"col": 260,
+"row": 206
+},
+{
+"col": 261,
+"row": 206
+},
+{
+"col": 280,
+"row": 212
+},
+{
+"col": 281,
+"row": 212
+},
+{
+"col": 279,
+"row": 212
+},
+{
+"col": 278,
+"row": 212
+},
+{
+"col": 277,
+"row": 211
+},
+{
+"col": 277,
+"row": 212
+},
+{
+"col": 278,
+"row": 211
+},
+{
+"col": 276,
+"row": 211
+},
+{
+"col": 276,
+"row": 212
+},
+{
+"col": 275,
+"row": 211
+},
+{
+"col": 275,
+"row": 212
+},
+{
+"col": 274,
+"row": 211
+},
+{
+"col": 272,
+"row": 211
+},
+{
+"col": 273,
+"row": 211
+},
+{
+"col": 271,
+"row": 210
+},
+{
+"col": 272,
+"row": 210
+},
+{
+"col": 270,
+"row": 210
+},
+{
+"col": 267,
+"row": 208
+},
+{
+"col": 268,
+"row": 208
+},
+{
+"col": 269,
+"row": 208
+},
+{
+"col": 269,
+"row": 209
+},
+{
+"col": 270,
+"row": 208
+},
+{
+"col": 270,
+"row": 209
+},
+{
+"col": 271,
+"row": 208
+},
+{
+"col": 271,
+"row": 209
+},
+{
+"col": 272,
+"row": 208
+},
+{
+"col": 272,
+"row": 209
+},
+{
+"col": 273,
+"row": 208
+},
+{
+"col": 273,
+"row": 209
+},
+{
+"col": 273,
+"row": 210
+},
+{
+"col": 274,
+"row": 209
+},
+{
+"col": 274,
+"row": 210
+},
+{
+"col": 275,
+"row": 209
+},
+{
+"col": 275,
+"row": 210
+},
+{
+"col": 276,
+"row": 209
+},
+{
+"col": 276,
+"row": 210
+},
+{
+"col": 277,
+"row": 210
+},
+{
+"col": 278,
+"row": 210
+},
+{
+"col": 283,
+"row": 212
+},
+{
+"col": 284,
+"row": 212
+},
+{
+"col": 285,
+"row": 212
+},
+{
+"col": 286,
+"row": 212
+},
+{
+"col": 286,
+"row": 211
+},
+{
+"col": 287,
+"row": 211
+},
+{
+"col": 287,
+"row": 212
+},
+{
+"col": 288,
+"row": 211
+},
+{
+"col": 288,
+"row": 212
+},
+{
+"col": 289,
+"row": 211
+},
+{
+"col": 289,
+"row": 212
+},
+{
+"col": 290,
+"row": 211
+},
+{
+"col": 290,
+"row": 212
+},
+{
+"col": 291,
+"row": 211
+},
+{
+"col": 291,
+"row": 212
+},
+{
+"col": 292,
+"row": 211
+},
+{
+"col": 292,
+"row": 212
+},
+{
+"col": 293,
+"row": 211
+},
+{
+"col": 293,
+"row": 212
+},
+{
+"col": 294,
+"row": 211
+},
+{
+"col": 294,
+"row": 212
+},
+{
+"col": 294,
+"row": 210
+},
+{
+"col": 295,
+"row": 210
+},
+{
+"col": 295,
+"row": 211
+},
+{
+"col": 296,
+"row": 210
+},
+{
+"col": 296,
+"row": 211
+},
+{
+"col": 297,
+"row": 210
+},
+{
+"col": 297,
+"row": 211
+},
+{
+"col": 296,
+"row": 209
+},
+{
+"col": 297,
+"row": 209
+},
+{
+"col": 298,
+"row": 209
+},
+{
+"col": 298,
+"row": 210
+},
+{
+"col": 299,
+"row": 209
+},
+{
+"col": 299,
+"row": 210
+},
+{
+"col": 298,
+"row": 208
+},
+{
+"col": 299,
+"row": 208
+},
+{
+"col": 300,
+"row": 208
+},
+{
+"col": 300,
+"row": 209
+},
+{
+"col": 301,
+"row": 208
+},
+{
+"col": 301,
+"row": 209
+},
+{
+"col": 301,
+"row": 207
+},
+{
+"col": 302,
+"row": 207
+},
+{
+"col": 302,
+"row": 208
+},
+{
+"col": 302,
+"row": 206
+},
+{
+"col": 303,
+"row": 206
+},
+{
+"col": 303,
+"row": 207
+},
+{
+"col": 304,
+"row": 206
+},
+{
+"col": 304,
+"row": 207,
+"linkSelLabel": {
+"label": "HOUSE"
+}
+},
+{
+"col": 303,
+"row": 205
+},
+{
+"col": 304,
+"row": 205
+},
+{
+"col": 305,
+"row": 205
+},
+{
+"col": 305,
+"row": 206
+},
+{
+"col": 305,
+"row": 207
+},
+{
+"col": 303,
+"row": 208
+},
+{
+"col": 304,
+"row": 208
+},
+{
+"col": 303,
+"row": 209
+},
+{
+"col": 304,
+"row": 209
+},
+{
+"col": 302,
+"row": 209
+},
+{
+"col": 301,
+"row": 210
+},
+{
+"col": 302,
+"row": 210
+},
+{
+"col": 300,
+"row": 210
+},
+{
+"col": 300,
+"row": 211
+},
+{
+"col": 301,
+"row": 211
+},
+{
+"col": 299,
+"row": 211
+},
+{
+"col": 299,
+"row": 212
+},
+{
+"col": 300,
+"row": 212
+},
+{
+"col": 298,
+"row": 211
+},
+{
+"col": 298,
+"row": 212
+},
+{
+"col": 296,
+"row": 212
+},
+{
+"col": 297,
+"row": 212
+},
+{
+"col": 295,
+"row": 212
+},
+{
+"col": 295,
+"row": 213
+},
+{
+"col": 296,
+"row": 213
+},
+{
+"col": 294,
+"row": 213
+},
+{
+"col": 293,
+"row": 213
+},
+{
+"col": 292,
+"row": 213
+},
+{
+"col": 291,
+"row": 213
+},
+{
+"col": 290,
+"row": 213
+},
+{
+"col": 289,
+"row": 213
+},
+{
+"col": 288,
+"row": 213
+},
+{
+"col": 282,
+"row": 212
+},
+{
+"col": 279,
+"row": 211
+},
+{
+"col": 280,
+"row": 211
+},
+{
+"col": 281,
+"row": 211
+},
+{
+"col": 282,
+"row": 211
+},
+{
+"col": 283,
+"row": 211
+},
+{
+"col": 283,
+"row": 210
+},
+{
+"col": 284,
+"row": 210
+},
+{
+"col": 284,
+"row": 211
+},
+{
+"col": 285,
+"row": 210
+},
+{
+"col": 285,
+"row": 211
+},
+{
+"col": 286,
+"row": 210
+},
+{
+"col": 287,
+"row": 210
+},
+{
+"col": 288,
+"row": 210
+},
+{
+"col": 289,
+"row": 210
+},
+{
+"col": 290,
+"row": 210
+},
+{
+"col": 291,
+"row": 210
+},
+{
+"col": 292,
+"row": 210
+},
+{
+"col": 292,
+"row": 209
+},
+{
+"col": 293,
+"row": 209
+},
+{
+"col": 293,
+"row": 210
+},
+{
+"col": 294,
+"row": 209
+},
+{
+"col": 295,
+"row": 209
+},
+{
+"col": 295,
+"row": 208
+},
+{
+"col": 296,
+"row": 208
+},
+{
+"col": 297,
+"row": 208
+},
+{
+"col": 297,
+"row": 207
+},
+{
+"col": 298,
+"row": 207
+},
+{
+"col": 299,
+"row": 207
+},
+{
+"col": 300,
+"row": 207
+},
+{
+"col": 299,
+"row": 206
+},
+{
+"col": 300,
+"row": 206
+},
+{
+"col": 301,
+"row": 206
+},
+{
+"col": 301,
+"row": 205
+},
+{
+"col": 302,
+"row": 205
+},
+{
+"col": 306,
+"row": 205
+},
+{
+"col": 306,
+"row": 206
+},
+{
+"col": 306,
+"row": 207
+},
+{
+"col": 307,
+"row": 206
+},
+{
+"col": 307,
+"row": 207
+},
+{
+"col": 306,
+"row": 208
+},
+{
+"col": 307,
+"row": 208
+},
+{
+"col": 305,
+"row": 208
+},
+{
+"col": 305,
+"row": 209
+},
+{
+"col": 306,
+"row": 209
+},
+{
+"col": 303,
+"row": 210
+},
+{
+"col": 304,
+"row": 210
+},
+{
+"col": 302,
+"row": 211
+},
+{
+"col": 303,
+"row": 211
+},
+{
+"col": 301,
+"row": 212
+},
+{
+"col": 298,
+"row": 213
+},
+{
+"col": 299,
+"row": 213
+},
+{
+"col": 297,
+"row": 213
+},
+{
+"col": 287,
+"row": 213
+},
+{
+"col": 286,
+"row": 213
+},
+{
+"col": 285,
+"row": 213
+},
+{
+"col": 284,
+"row": 213
+},
+{
+"col": 283,
+"row": 213
+},
+{
+"col": 282,
+"row": 213
+},
+{
+"col": 281,
+"row": 213
+},
+{
+"col": 280,
+"row": 213
+},
+{
+"col": 279,
+"row": 213
+},
+{
+"col": 278,
+"row": 213
+},
+{
+"col": 277,
+"row": 213
 }
 ]
 },
@@ -44539,6 +46209,43 @@
 {},
 {}
 ]
+},
+{
+"uid": "O_GUARD",
+"id": 190,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 2000,
+"y": 331,
+"parallax": 100,
+"lightAmbient": 255,
+"lightDiffuse": 16777215,
+"lightAngle": 30,
+"lightDist": -1,
+"grids": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+],
+"paths": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+]
 }
 ],
 "sid": 6,
@@ -44556,7 +46263,3249 @@
 "x": 3006,
 "y": 1401,
 "width": 262,
-"height": 301
+"height": 301,
+"title": {
+"en": "Church"
+}
+},
+{
+"name": "HOUSE",
+"id": 189,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 4748,
+"y": 2840,
+"width": 537,
+"height": 595,
+"title": {
+"en": "House"
+}
+},
+{
+"name": "NEXT_SCENE",
+"id": 191,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 5163,
+"y": 264,
+"width": 843,
+"height": 1050
+}
+]
+},
+{
+"scene": {
+"lightAmbient": -1,
+"lightBlur": -1,
+"backOpacityMin": 100,
+"backOpacityMax": 100,
+"backOpacitySpeed": 100,
+"layers": {
+"MA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"MD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FA": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FB": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FC": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+},
+"FD": {
+"speedX": 100,
+"speedY": 100,
+"parallax": 100,
+"opacityMin": 100,
+"opacityMax": 100,
+"opacitySpeed": 100
+}
+},
+"zoom": 55,
+"nextID": 2,
+"role": "R_FORET_DE_VALNOIR",
+"bokehMaxZoom": 100,
+"x": -360,
+"y": 233
+},
+"sid": 20,
+"uid": "S_FORET_DE_VALNOIR",
+"objects": [
+{
+"uid": "O_PLAYER",
+"depths": [
+{
+"a": 400,
+"b": 100
+},
+{
+"y": 2000,
+"a": 400,
+"b": 100
+}
+],
+"id": 1,
+"tags": [
+"",
+"",
+"",
+""
+],
+"x": 1023,
+"y": 1908,
+"parallax": 100,
+"lightAmbient": 255,
+"lightDiffuse": 16777215,
+"lightAngle": 30,
+"lightDist": -1,
+"grids": [
+{
+"cells": [
+{
+"col": 63,
+"row": 115
+},
+{
+"col": 63,
+"row": 116
+},
+{
+"col": 63,
+"row": 117
+},
+{
+"col": 63,
+"row": 118
+},
+{
+"col": 63,
+"row": 119
+},
+{
+"col": 63,
+"row": 120
+},
+{
+"col": 63,
+"row": 121
+},
+{
+"col": 63,
+"row": 122
+},
+{
+"col": 64,
+"row": 115
+},
+{
+"col": 64,
+"row": 116
+},
+{
+"col": 64,
+"row": 117
+},
+{
+"col": 64,
+"row": 118
+},
+{
+"col": 64,
+"row": 119
+},
+{
+"col": 64,
+"row": 120
+},
+{
+"col": 64,
+"row": 121
+},
+{
+"col": 64,
+"row": 122
+},
+{
+"col": 65,
+"row": 115
+},
+{
+"col": 65,
+"row": 116
+},
+{
+"col": 65,
+"row": 117
+},
+{
+"col": 65,
+"row": 118
+},
+{
+"col": 65,
+"row": 119
+},
+{
+"col": 65,
+"row": 120
+},
+{
+"col": 65,
+"row": 121
+},
+{
+"col": 65,
+"row": 122
+},
+{
+"col": 66,
+"row": 115
+},
+{
+"col": 66,
+"row": 116
+},
+{
+"col": 66,
+"row": 117
+},
+{
+"col": 66,
+"row": 118
+},
+{
+"col": 66,
+"row": 119
+},
+{
+"col": 66,
+"row": 120
+},
+{
+"col": 66,
+"row": 121
+},
+{
+"col": 66,
+"row": 122
+},
+{
+"col": 67,
+"row": 115
+},
+{
+"col": 67,
+"row": 116
+},
+{
+"col": 67,
+"row": 117
+},
+{
+"col": 67,
+"row": 118
+},
+{
+"col": 67,
+"row": 119
+},
+{
+"col": 67,
+"row": 120
+},
+{
+"col": 67,
+"row": 121
+},
+{
+"col": 67,
+"row": 122
+},
+{
+"col": 68,
+"row": 115
+},
+{
+"col": 68,
+"row": 116
+},
+{
+"col": 68,
+"row": 117
+},
+{
+"col": 68,
+"row": 118
+},
+{
+"col": 68,
+"row": 119
+},
+{
+"col": 68,
+"row": 120
+},
+{
+"col": 68,
+"row": 121
+},
+{
+"col": 68,
+"row": 122
+},
+{
+"col": 69,
+"row": 115
+},
+{
+"col": 69,
+"row": 116
+},
+{
+"col": 69,
+"row": 117
+},
+{
+"col": 69,
+"row": 118
+},
+{
+"col": 69,
+"row": 119
+},
+{
+"col": 69,
+"row": 120
+},
+{
+"col": 69,
+"row": 121
+},
+{
+"col": 69,
+"row": 122
+},
+{
+"col": 70,
+"row": 115
+},
+{
+"col": 70,
+"row": 116
+},
+{
+"col": 70,
+"row": 117
+},
+{
+"col": 70,
+"row": 118
+},
+{
+"col": 70,
+"row": 119
+},
+{
+"col": 70,
+"row": 120
+},
+{
+"col": 70,
+"row": 121
+},
+{
+"col": 70,
+"row": 122
+},
+{
+"col": 62,
+"row": 114
+},
+{
+"col": 62,
+"row": 115
+},
+{
+"col": 62,
+"row": 116
+},
+{
+"col": 62,
+"row": 117
+},
+{
+"col": 62,
+"row": 118
+},
+{
+"col": 62,
+"row": 119
+},
+{
+"col": 62,
+"row": 120
+},
+{
+"col": 62,
+"row": 121
+},
+{
+"col": 63,
+"row": 114
+},
+{
+"col": 64,
+"row": 114
+},
+{
+"col": 65,
+"row": 114
+},
+{
+"col": 66,
+"row": 114
+},
+{
+"col": 67,
+"row": 114
+},
+{
+"col": 68,
+"row": 114
+},
+{
+"col": 69,
+"row": 114
+},
+{
+"col": 62,
+"row": 113
+},
+{
+"col": 63,
+"row": 113
+},
+{
+"col": 64,
+"row": 113
+},
+{
+"col": 65,
+"row": 113
+},
+{
+"col": 66,
+"row": 113
+},
+{
+"col": 67,
+"row": 113
+},
+{
+"col": 68,
+"row": 113
+},
+{
+"col": 69,
+"row": 113
+},
+{
+"col": 62,
+"row": 112
+},
+{
+"col": 63,
+"row": 112
+},
+{
+"col": 64,
+"row": 112
+},
+{
+"col": 65,
+"row": 112
+},
+{
+"col": 66,
+"row": 112
+},
+{
+"col": 67,
+"row": 112
+},
+{
+"col": 68,
+"row": 112
+},
+{
+"col": 69,
+"row": 112
+},
+{
+"col": 61,
+"row": 111
+},
+{
+"col": 61,
+"row": 112
+},
+{
+"col": 61,
+"row": 113
+},
+{
+"col": 61,
+"row": 114
+},
+{
+"col": 61,
+"row": 115
+},
+{
+"col": 61,
+"row": 116
+},
+{
+"col": 61,
+"row": 117
+},
+{
+"col": 61,
+"row": 118
+},
+{
+"col": 62,
+"row": 111
+},
+{
+"col": 63,
+"row": 111
+},
+{
+"col": 64,
+"row": 111
+},
+{
+"col": 65,
+"row": 111
+},
+{
+"col": 66,
+"row": 111
+},
+{
+"col": 67,
+"row": 111
+},
+{
+"col": 68,
+"row": 111
+},
+{
+"col": 61,
+"row": 110
+},
+{
+"col": 62,
+"row": 110
+},
+{
+"col": 63,
+"row": 110
+},
+{
+"col": 64,
+"row": 110
+},
+{
+"col": 65,
+"row": 110
+},
+{
+"col": 66,
+"row": 110
+},
+{
+"col": 67,
+"row": 110
+},
+{
+"col": 68,
+"row": 110
+},
+{
+"col": 61,
+"row": 109
+},
+{
+"col": 62,
+"row": 109
+},
+{
+"col": 63,
+"row": 109
+},
+{
+"col": 64,
+"row": 109
+},
+{
+"col": 65,
+"row": 109
+},
+{
+"col": 66,
+"row": 109
+},
+{
+"col": 67,
+"row": 109
+},
+{
+"col": 68,
+"row": 109
+},
+{
+"col": 62,
+"row": 108
+},
+{
+"col": 63,
+"row": 108
+},
+{
+"col": 64,
+"row": 108
+},
+{
+"col": 65,
+"row": 108
+},
+{
+"col": 66,
+"row": 108
+},
+{
+"col": 67,
+"row": 108
+},
+{
+"col": 68,
+"row": 108
+},
+{
+"col": 69,
+"row": 108
+},
+{
+"col": 69,
+"row": 109
+},
+{
+"col": 69,
+"row": 110
+},
+{
+"col": 69,
+"row": 111
+},
+{
+"col": 63,
+"row": 106
+},
+{
+"col": 63,
+"row": 107
+},
+{
+"col": 64,
+"row": 106
+},
+{
+"col": 64,
+"row": 107
+},
+{
+"col": 65,
+"row": 106
+},
+{
+"col": 65,
+"row": 107
+},
+{
+"col": 66,
+"row": 106
+},
+{
+"col": 66,
+"row": 107
+},
+{
+"col": 67,
+"row": 106
+},
+{
+"col": 67,
+"row": 107
+},
+{
+"col": 68,
+"row": 106
+},
+{
+"col": 68,
+"row": 107
+},
+{
+"col": 69,
+"row": 106
+},
+{
+"col": 69,
+"row": 107
+},
+{
+"col": 70,
+"row": 106
+},
+{
+"col": 70,
+"row": 107
+},
+{
+"col": 70,
+"row": 108
+},
+{
+"col": 70,
+"row": 109
+},
+{
+"col": 70,
+"row": 110
+},
+{
+"col": 70,
+"row": 111
+},
+{
+"col": 70,
+"row": 112
+},
+{
+"col": 70,
+"row": 113
+},
+{
+"col": 64,
+"row": 105
+},
+{
+"col": 65,
+"row": 105
+},
+{
+"col": 66,
+"row": 105
+},
+{
+"col": 67,
+"row": 105
+},
+{
+"col": 68,
+"row": 105
+},
+{
+"col": 69,
+"row": 105
+},
+{
+"col": 70,
+"row": 105
+},
+{
+"col": 71,
+"row": 105
+},
+{
+"col": 71,
+"row": 106
+},
+{
+"col": 71,
+"row": 107
+},
+{
+"col": 71,
+"row": 108
+},
+{
+"col": 71,
+"row": 109
+},
+{
+"col": 71,
+"row": 110
+},
+{
+"col": 71,
+"row": 111
+},
+{
+"col": 71,
+"row": 112
+},
+{
+"col": 65,
+"row": 104
+},
+{
+"col": 66,
+"row": 104
+},
+{
+"col": 67,
+"row": 104
+},
+{
+"col": 68,
+"row": 104
+},
+{
+"col": 69,
+"row": 104
+},
+{
+"col": 70,
+"row": 104
+},
+{
+"col": 71,
+"row": 104
+},
+{
+"col": 72,
+"row": 104
+},
+{
+"col": 72,
+"row": 105
+},
+{
+"col": 72,
+"row": 106
+},
+{
+"col": 72,
+"row": 107
+},
+{
+"col": 72,
+"row": 108
+},
+{
+"col": 72,
+"row": 109
+},
+{
+"col": 72,
+"row": 110
+},
+{
+"col": 72,
+"row": 111
+},
+{
+"col": 65,
+"row": 103
+},
+{
+"col": 66,
+"row": 103
+},
+{
+"col": 67,
+"row": 103
+},
+{
+"col": 68,
+"row": 103
+},
+{
+"col": 69,
+"row": 103
+},
+{
+"col": 70,
+"row": 103
+},
+{
+"col": 71,
+"row": 103
+},
+{
+"col": 72,
+"row": 103
+},
+{
+"col": 73,
+"row": 103
+},
+{
+"col": 73,
+"row": 104
+},
+{
+"col": 73,
+"row": 105
+},
+{
+"col": 73,
+"row": 106
+},
+{
+"col": 73,
+"row": 107
+},
+{
+"col": 73,
+"row": 108
+},
+{
+"col": 73,
+"row": 109
+},
+{
+"col": 73,
+"row": 110
+},
+{
+"col": 66,
+"row": 102
+},
+{
+"col": 67,
+"row": 102
+},
+{
+"col": 68,
+"row": 102
+},
+{
+"col": 69,
+"row": 102
+},
+{
+"col": 70,
+"row": 102
+},
+{
+"col": 71,
+"row": 102
+},
+{
+"col": 72,
+"row": 102
+},
+{
+"col": 73,
+"row": 102
+},
+{
+"col": 74,
+"row": 102
+},
+{
+"col": 74,
+"row": 103
+},
+{
+"col": 74,
+"row": 104
+},
+{
+"col": 74,
+"row": 105
+},
+{
+"col": 74,
+"row": 106
+},
+{
+"col": 74,
+"row": 107
+},
+{
+"col": 74,
+"row": 108
+},
+{
+"col": 74,
+"row": 109
+},
+{
+"col": 67,
+"row": 101
+},
+{
+"col": 68,
+"row": 101
+},
+{
+"col": 69,
+"row": 101
+},
+{
+"col": 70,
+"row": 101
+},
+{
+"col": 71,
+"row": 101
+},
+{
+"col": 72,
+"row": 101
+},
+{
+"col": 73,
+"row": 101
+},
+{
+"col": 74,
+"row": 101
+},
+{
+"col": 75,
+"row": 101
+},
+{
+"col": 75,
+"row": 102
+},
+{
+"col": 75,
+"row": 103
+},
+{
+"col": 75,
+"row": 104
+},
+{
+"col": 75,
+"row": 105
+},
+{
+"col": 75,
+"row": 106
+},
+{
+"col": 75,
+"row": 107
+},
+{
+"col": 75,
+"row": 108
+},
+{
+"col": 68,
+"row": 100
+},
+{
+"col": 69,
+"row": 100
+},
+{
+"col": 70,
+"row": 100
+},
+{
+"col": 71,
+"row": 100
+},
+{
+"col": 72,
+"row": 100
+},
+{
+"col": 73,
+"row": 100
+},
+{
+"col": 74,
+"row": 100
+},
+{
+"col": 75,
+"row": 100
+},
+{
+"col": 76,
+"row": 100
+},
+{
+"col": 76,
+"row": 101
+},
+{
+"col": 76,
+"row": 102
+},
+{
+"col": 76,
+"row": 103
+},
+{
+"col": 76,
+"row": 104
+},
+{
+"col": 76,
+"row": 105
+},
+{
+"col": 76,
+"row": 106
+},
+{
+"col": 76,
+"row": 107
+},
+{
+"col": 69,
+"row": 99
+},
+{
+"col": 70,
+"row": 99
+},
+{
+"col": 71,
+"row": 99
+},
+{
+"col": 72,
+"row": 99
+},
+{
+"col": 73,
+"row": 99
+},
+{
+"col": 74,
+"row": 99
+},
+{
+"col": 75,
+"row": 99
+},
+{
+"col": 76,
+"row": 99
+},
+{
+"col": 70,
+"row": 98
+},
+{
+"col": 71,
+"row": 98
+},
+{
+"col": 72,
+"row": 98
+},
+{
+"col": 73,
+"row": 98
+},
+{
+"col": 74,
+"row": 98
+},
+{
+"col": 75,
+"row": 98
+},
+{
+"col": 76,
+"row": 98
+},
+{
+"col": 77,
+"row": 98
+},
+{
+"col": 77,
+"row": 99
+},
+{
+"col": 77,
+"row": 100
+},
+{
+"col": 77,
+"row": 101
+},
+{
+"col": 77,
+"row": 102
+},
+{
+"col": 77,
+"row": 103
+},
+{
+"col": 77,
+"row": 104
+},
+{
+"col": 77,
+"row": 105
+},
+{
+"col": 71,
+"row": 97
+},
+{
+"col": 72,
+"row": 97
+},
+{
+"col": 73,
+"row": 97
+},
+{
+"col": 74,
+"row": 97
+},
+{
+"col": 75,
+"row": 97
+},
+{
+"col": 76,
+"row": 97
+},
+{
+"col": 77,
+"row": 97
+},
+{
+"col": 78,
+"row": 97
+},
+{
+"col": 78,
+"row": 98
+},
+{
+"col": 78,
+"row": 99
+},
+{
+"col": 78,
+"row": 100
+},
+{
+"col": 78,
+"row": 101
+},
+{
+"col": 78,
+"row": 102
+},
+{
+"col": 78,
+"row": 103
+},
+{
+"col": 78,
+"row": 104
+},
+{
+"col": 71,
+"row": 96
+},
+{
+"col": 72,
+"row": 96
+},
+{
+"col": 73,
+"row": 96
+},
+{
+"col": 74,
+"row": 96
+},
+{
+"col": 75,
+"row": 96
+},
+{
+"col": 76,
+"row": 96
+},
+{
+"col": 77,
+"row": 96
+},
+{
+"col": 78,
+"row": 96
+},
+{
+"col": 71,
+"row": 95
+},
+{
+"col": 72,
+"row": 95
+},
+{
+"col": 73,
+"row": 95
+},
+{
+"col": 74,
+"row": 95
+},
+{
+"col": 75,
+"row": 95
+},
+{
+"col": 76,
+"row": 95
+},
+{
+"col": 77,
+"row": 95
+},
+{
+"col": 78,
+"row": 95
+},
+{
+"col": 79,
+"row": 95
+},
+{
+"col": 79,
+"row": 96
+},
+{
+"col": 79,
+"row": 97
+},
+{
+"col": 79,
+"row": 98
+},
+{
+"col": 79,
+"row": 99
+},
+{
+"col": 79,
+"row": 100
+},
+{
+"col": 79,
+"row": 101
+},
+{
+"col": 79,
+"row": 102
+},
+{
+"col": 72,
+"row": 94
+},
+{
+"col": 73,
+"row": 94
+},
+{
+"col": 74,
+"row": 94
+},
+{
+"col": 75,
+"row": 94
+},
+{
+"col": 76,
+"row": 94
+},
+{
+"col": 77,
+"row": 94
+},
+{
+"col": 78,
+"row": 94
+},
+{
+"col": 79,
+"row": 94
+},
+{
+"col": 72,
+"row": 93
+},
+{
+"col": 73,
+"row": 93
+},
+{
+"col": 74,
+"row": 93
+},
+{
+"col": 75,
+"row": 93
+},
+{
+"col": 76,
+"row": 93
+},
+{
+"col": 77,
+"row": 93
+},
+{
+"col": 78,
+"row": 93
+},
+{
+"col": 79,
+"row": 93
+},
+{
+"col": 72,
+"row": 92
+},
+{
+"col": 73,
+"row": 92
+},
+{
+"col": 74,
+"row": 92
+},
+{
+"col": 75,
+"row": 92
+},
+{
+"col": 76,
+"row": 92
+},
+{
+"col": 77,
+"row": 92
+},
+{
+"col": 78,
+"row": 92
+},
+{
+"col": 79,
+"row": 92
+},
+{
+"col": 71,
+"row": 92
+},
+{
+"col": 71,
+"row": 93
+},
+{
+"col": 71,
+"row": 94
+},
+{
+"col": 71,
+"row": 91
+},
+{
+"col": 72,
+"row": 91
+},
+{
+"col": 73,
+"row": 91
+},
+{
+"col": 74,
+"row": 91
+},
+{
+"col": 75,
+"row": 91
+},
+{
+"col": 76,
+"row": 91
+},
+{
+"col": 77,
+"row": 91
+},
+{
+"col": 78,
+"row": 91
+},
+{
+"col": 70,
+"row": 91
+},
+{
+"col": 70,
+"row": 92
+},
+{
+"col": 70,
+"row": 93
+},
+{
+"col": 70,
+"row": 94
+},
+{
+"col": 70,
+"row": 95
+},
+{
+"col": 70,
+"row": 96
+},
+{
+"col": 70,
+"row": 97
+},
+{
+"col": 69,
+"row": 91
+},
+{
+"col": 69,
+"row": 92
+},
+{
+"col": 69,
+"row": 93
+},
+{
+"col": 69,
+"row": 94
+},
+{
+"col": 69,
+"row": 95
+},
+{
+"col": 69,
+"row": 96
+},
+{
+"col": 69,
+"row": 97
+},
+{
+"col": 69,
+"row": 98
+},
+{
+"col": 69,
+"row": 90
+},
+{
+"col": 70,
+"row": 90
+},
+{
+"col": 71,
+"row": 90
+},
+{
+"col": 72,
+"row": 90
+},
+{
+"col": 73,
+"row": 90
+},
+{
+"col": 74,
+"row": 90
+},
+{
+"col": 75,
+"row": 90
+},
+{
+"col": 76,
+"row": 90
+},
+{
+"col": 68,
+"row": 90
+},
+{
+"col": 68,
+"row": 91
+},
+{
+"col": 68,
+"row": 92
+},
+{
+"col": 68,
+"row": 93
+},
+{
+"col": 68,
+"row": 94
+},
+{
+"col": 68,
+"row": 95
+},
+{
+"col": 68,
+"row": 96
+},
+{
+"col": 68,
+"row": 97
+},
+{
+"col": 67,
+"row": 90
+},
+{
+"col": 67,
+"row": 91
+},
+{
+"col": 67,
+"row": 92
+},
+{
+"col": 67,
+"row": 93
+},
+{
+"col": 67,
+"row": 94
+},
+{
+"col": 67,
+"row": 95
+},
+{
+"col": 67,
+"row": 96
+},
+{
+"col": 67,
+"row": 97
+},
+{
+"col": 66,
+"row": 90
+},
+{
+"col": 66,
+"row": 91
+},
+{
+"col": 66,
+"row": 92
+},
+{
+"col": 66,
+"row": 93
+},
+{
+"col": 66,
+"row": 94
+},
+{
+"col": 66,
+"row": 95
+},
+{
+"col": 66,
+"row": 96
+},
+{
+"col": 66,
+"row": 97
+},
+{
+"col": 65,
+"row": 89
+},
+{
+"col": 65,
+"row": 90
+},
+{
+"col": 65,
+"row": 91
+},
+{
+"col": 65,
+"row": 92
+},
+{
+"col": 65,
+"row": 93
+},
+{
+"col": 65,
+"row": 94
+},
+{
+"col": 65,
+"row": 95
+},
+{
+"col": 65,
+"row": 96
+},
+{
+"col": 66,
+"row": 89
+},
+{
+"col": 67,
+"row": 89
+},
+{
+"col": 68,
+"row": 89
+},
+{
+"col": 69,
+"row": 89
+},
+{
+"col": 70,
+"row": 89
+},
+{
+"col": 71,
+"row": 89
+},
+{
+"col": 72,
+"row": 89
+},
+{
+"col": 64,
+"row": 89
+},
+{
+"col": 64,
+"row": 90
+},
+{
+"col": 64,
+"row": 91
+},
+{
+"col": 64,
+"row": 92
+},
+{
+"col": 64,
+"row": 93
+},
+{
+"col": 64,
+"row": 94
+},
+{
+"col": 64,
+"row": 95
+},
+{
+"col": 64,
+"row": 96
+},
+{
+"col": 63,
+"row": 88
+},
+{
+"col": 63,
+"row": 89
+},
+{
+"col": 63,
+"row": 90
+},
+{
+"col": 63,
+"row": 91
+},
+{
+"col": 63,
+"row": 92
+},
+{
+"col": 63,
+"row": 93
+},
+{
+"col": 63,
+"row": 94
+},
+{
+"col": 63,
+"row": 95
+},
+{
+"col": 64,
+"row": 88
+},
+{
+"col": 65,
+"row": 88
+},
+{
+"col": 66,
+"row": 88
+},
+{
+"col": 67,
+"row": 88
+},
+{
+"col": 68,
+"row": 88
+},
+{
+"col": 69,
+"row": 88
+},
+{
+"col": 70,
+"row": 88
+},
+{
+"col": 62,
+"row": 88
+},
+{
+"col": 62,
+"row": 89
+},
+{
+"col": 62,
+"row": 90
+},
+{
+"col": 62,
+"row": 91
+},
+{
+"col": 62,
+"row": 92
+},
+{
+"col": 62,
+"row": 93
+},
+{
+"col": 62,
+"row": 94
+},
+{
+"col": 62,
+"row": 95
+},
+{
+"col": 61,
+"row": 88
+},
+{
+"col": 61,
+"row": 89
+},
+{
+"col": 61,
+"row": 90
+},
+{
+"col": 61,
+"row": 91
+},
+{
+"col": 61,
+"row": 92
+},
+{
+"col": 61,
+"row": 93
+},
+{
+"col": 61,
+"row": 94
+},
+{
+"col": 61,
+"row": 95
+},
+{
+"col": 59,
+"row": 87
+},
+{
+"col": 59,
+"row": 88
+},
+{
+"col": 59,
+"row": 89
+},
+{
+"col": 59,
+"row": 90
+},
+{
+"col": 59,
+"row": 91
+},
+{
+"col": 59,
+"row": 92
+},
+{
+"col": 59,
+"row": 93
+},
+{
+"col": 59,
+"row": 94
+},
+{
+"col": 60,
+"row": 87
+},
+{
+"col": 60,
+"row": 88
+},
+{
+"col": 60,
+"row": 89
+},
+{
+"col": 60,
+"row": 90
+},
+{
+"col": 60,
+"row": 91
+},
+{
+"col": 60,
+"row": 92
+},
+{
+"col": 60,
+"row": 93
+},
+{
+"col": 60,
+"row": 94
+},
+{
+"col": 61,
+"row": 87
+},
+{
+"col": 62,
+"row": 87
+},
+{
+"col": 63,
+"row": 87
+},
+{
+"col": 64,
+"row": 87
+},
+{
+"col": 65,
+"row": 87
+},
+{
+"col": 66,
+"row": 87
+},
+{
+"col": 58,
+"row": 87
+},
+{
+"col": 58,
+"row": 88
+},
+{
+"col": 58,
+"row": 89
+},
+{
+"col": 58,
+"row": 90
+},
+{
+"col": 58,
+"row": 91
+},
+{
+"col": 58,
+"row": 92
+},
+{
+"col": 58,
+"row": 93
+},
+{
+"col": 58,
+"row": 94
+},
+{
+"col": 58,
+"row": 86
+},
+{
+"col": 59,
+"row": 86
+},
+{
+"col": 60,
+"row": 86
+},
+{
+"col": 61,
+"row": 86
+},
+{
+"col": 62,
+"row": 86
+},
+{
+"col": 63,
+"row": 86
+},
+{
+"col": 64,
+"row": 86
+},
+{
+"col": 65,
+"row": 86
+},
+{
+"col": 57,
+"row": 86
+},
+{
+"col": 57,
+"row": 87
+},
+{
+"col": 57,
+"row": 88
+},
+{
+"col": 57,
+"row": 89
+},
+{
+"col": 57,
+"row": 90
+},
+{
+"col": 57,
+"row": 91
+},
+{
+"col": 57,
+"row": 92
+},
+{
+"col": 57,
+"row": 93
+},
+{
+"col": 57,
+"row": 85
+},
+{
+"col": 58,
+"row": 85
+},
+{
+"col": 59,
+"row": 85
+},
+{
+"col": 60,
+"row": 85
+},
+{
+"col": 61,
+"row": 85
+},
+{
+"col": 62,
+"row": 85
+},
+{
+"col": 63,
+"row": 85
+},
+{
+"col": 64,
+"row": 85
+},
+{
+"col": 56,
+"row": 85
+},
+{
+"col": 56,
+"row": 86
+},
+{
+"col": 56,
+"row": 87
+},
+{
+"col": 56,
+"row": 88
+},
+{
+"col": 56,
+"row": 89
+},
+{
+"col": 56,
+"row": 90
+},
+{
+"col": 56,
+"row": 91
+},
+{
+"col": 56,
+"row": 92
+},
+{
+"col": 56,
+"row": 84
+},
+{
+"col": 57,
+"row": 84
+},
+{
+"col": 58,
+"row": 84
+},
+{
+"col": 59,
+"row": 84
+},
+{
+"col": 60,
+"row": 84
+},
+{
+"col": 61,
+"row": 84
+},
+{
+"col": 62,
+"row": 84
+},
+{
+"col": 63,
+"row": 84
+},
+{
+"col": 55,
+"row": 84
+},
+{
+"col": 55,
+"row": 85
+},
+{
+"col": 55,
+"row": 86
+},
+{
+"col": 55,
+"row": 87
+},
+{
+"col": 55,
+"row": 88
+},
+{
+"col": 55,
+"row": 89
+},
+{
+"col": 55,
+"row": 90
+},
+{
+"col": 55,
+"row": 91
+},
+{
+"col": 55,
+"row": 83
+},
+{
+"col": 56,
+"row": 83
+},
+{
+"col": 57,
+"row": 83
+},
+{
+"col": 58,
+"row": 83
+},
+{
+"col": 59,
+"row": 83
+},
+{
+"col": 60,
+"row": 83
+},
+{
+"col": 61,
+"row": 83
+},
+{
+"col": 62,
+"row": 83
+},
+{
+"col": 54,
+"row": 83
+},
+{
+"col": 54,
+"row": 84
+},
+{
+"col": 54,
+"row": 85
+},
+{
+"col": 54,
+"row": 86
+},
+{
+"col": 54,
+"row": 87
+},
+{
+"col": 54,
+"row": 88
+},
+{
+"col": 54,
+"row": 89
+},
+{
+"col": 54,
+"row": 90
+},
+{
+"col": 54,
+"row": 82
+},
+{
+"col": 55,
+"row": 82
+},
+{
+"col": 56,
+"row": 82
+},
+{
+"col": 57,
+"row": 82
+},
+{
+"col": 58,
+"row": 82
+},
+{
+"col": 59,
+"row": 82
+},
+{
+"col": 60,
+"row": 82
+},
+{
+"col": 61,
+"row": 82
+},
+{
+"col": 55,
+"row": 80
+},
+{
+"col": 55,
+"row": 81
+},
+{
+"col": 56,
+"row": 80
+},
+{
+"col": 56,
+"row": 81
+},
+{
+"col": 57,
+"row": 80
+},
+{
+"col": 57,
+"row": 81
+},
+{
+"col": 58,
+"row": 80
+},
+{
+"col": 58,
+"row": 81
+},
+{
+"col": 59,
+"row": 80
+},
+{
+"col": 59,
+"row": 81
+},
+{
+"col": 60,
+"row": 80
+},
+{
+"col": 60,
+"row": 81
+},
+{
+"col": 61,
+"row": 80
+},
+{
+"col": 61,
+"row": 81
+},
+{
+"col": 62,
+"row": 80
+},
+{
+"col": 62,
+"row": 81
+},
+{
+"col": 62,
+"row": 82
+},
+{
+"col": 57,
+"row": 79
+},
+{
+"col": 58,
+"row": 79
+},
+{
+"col": 59,
+"row": 79
+},
+{
+"col": 60,
+"row": 79
+},
+{
+"col": 61,
+"row": 79
+},
+{
+"col": 62,
+"row": 79
+},
+{
+"col": 63,
+"row": 79
+},
+{
+"col": 63,
+"row": 80
+},
+{
+"col": 63,
+"row": 81
+},
+{
+"col": 63,
+"row": 82
+},
+{
+"col": 63,
+"row": 83
+},
+{
+"col": 64,
+"row": 79
+},
+{
+"col": 64,
+"row": 80
+},
+{
+"col": 64,
+"row": 81
+},
+{
+"col": 64,
+"row": 82
+},
+{
+"col": 64,
+"row": 83
+},
+{
+"col": 64,
+"row": 84
+},
+{
+"col": 59,
+"row": 78
+},
+{
+"col": 60,
+"row": 78
+},
+{
+"col": 61,
+"row": 78
+},
+{
+"col": 62,
+"row": 78
+},
+{
+"col": 63,
+"row": 78
+},
+{
+"col": 64,
+"row": 78
+},
+{
+"col": 65,
+"row": 78
+},
+{
+"col": 65,
+"row": 79
+},
+{
+"col": 65,
+"row": 80
+},
+{
+"col": 65,
+"row": 81
+},
+{
+"col": 65,
+"row": 82
+},
+{
+"col": 65,
+"row": 83
+},
+{
+"col": 65,
+"row": 84
+},
+{
+"col": 65,
+"row": 85
+},
+{
+"col": 60,
+"row": 77
+},
+{
+"col": 61,
+"row": 77
+},
+{
+"col": 62,
+"row": 77
+},
+{
+"col": 63,
+"row": 77
+},
+{
+"col": 64,
+"row": 77
+},
+{
+"col": 65,
+"row": 77
+},
+{
+"col": 66,
+"row": 77
+},
+{
+"col": 66,
+"row": 78
+},
+{
+"col": 66,
+"row": 79
+},
+{
+"col": 66,
+"row": 80
+},
+{
+"col": 66,
+"row": 81
+},
+{
+"col": 66,
+"row": 82
+},
+{
+"col": 66,
+"row": 83
+},
+{
+"col": 66,
+"row": 84
+},
+{
+"col": 62,
+"row": 76
+},
+{
+"col": 63,
+"row": 76
+},
+{
+"col": 64,
+"row": 76
+},
+{
+"col": 65,
+"row": 76
+},
+{
+"col": 66,
+"row": 76
+},
+{
+"col": 67,
+"row": 76
+},
+{
+"col": 67,
+"row": 77
+},
+{
+"col": 67,
+"row": 78
+},
+{
+"col": 67,
+"row": 79
+},
+{
+"col": 67,
+"row": 80
+},
+{
+"col": 67,
+"row": 81
+},
+{
+"col": 67,
+"row": 82
+},
+{
+"col": 67,
+"row": 83
+},
+{
+"col": 68,
+"row": 76
+},
+{
+"col": 68,
+"row": 77
+},
+{
+"col": 68,
+"row": 78
+},
+{
+"col": 68,
+"row": 79
+},
+{
+"col": 68,
+"row": 80
+},
+{
+"col": 68,
+"row": 81
+},
+{
+"col": 68,
+"row": 82
+},
+{
+"col": 68,
+"row": 83
+},
+{
+"col": 69,
+"row": 76
+},
+{
+"col": 69,
+"row": 77
+},
+{
+"col": 69,
+"row": 78
+},
+{
+"col": 69,
+"row": 79
+},
+{
+"col": 69,
+"row": 80
+},
+{
+"col": 69,
+"row": 81
+},
+{
+"col": 69,
+"row": 82
+},
+{
+"col": 69,
+"row": 83
+},
+{
+"col": 64,
+"row": 75
+},
+{
+"col": 65,
+"row": 75
+},
+{
+"col": 66,
+"row": 75
+},
+{
+"col": 67,
+"row": 75
+},
+{
+"col": 68,
+"row": 75
+},
+{
+"col": 69,
+"row": 75
+},
+{
+"col": 70,
+"row": 75
+},
+{
+"col": 70,
+"row": 76
+},
+{
+"col": 70,
+"row": 77
+},
+{
+"col": 70,
+"row": 78
+},
+{
+"col": 70,
+"row": 79
+},
+{
+"col": 70,
+"row": 80
+},
+{
+"col": 70,
+"row": 81
+},
+{
+"col": 70,
+"row": 82
+},
+{
+"col": 65,
+"row": 74
+},
+{
+"col": 66,
+"row": 74
+},
+{
+"col": 67,
+"row": 74
+},
+{
+"col": 68,
+"row": 74
+},
+{
+"col": 69,
+"row": 74
+},
+{
+"col": 70,
+"row": 74
+},
+{
+"col": 67,
+"row": 73
+},
+{
+"col": 68,
+"row": 73
+},
+{
+"col": 69,
+"row": 73
+},
+{
+"col": 70,
+"row": 73
+},
+{
+"col": 67,
+"row": 72
+},
+{
+"col": 68,
+"row": 72
+},
+{
+"col": 69,
+"row": 72
+},
+{
+"col": 70,
+"row": 72
+},
+{
+"col": 69,
+"row": 71
+},
+{
+"col": 71,
+"row": 76
+},
+{
+"col": 71,
+"row": 77
+},
+{
+"col": 71,
+"row": 78
+},
+{
+"col": 71,
+"row": 79
+},
+{
+"col": 71,
+"row": 75
+},
+{
+"col": 72,
+"row": 75
+},
+{
+"col": 72,
+"row": 76
+},
+{
+"col": 72,
+"row": 77
+},
+{
+"col": 72,
+"row": 78
+},
+{
+"col": 71,
+"row": 74
+},
+{
+"col": 72,
+"row": 74
+},
+{
+"col": 73,
+"row": 74
+},
+{
+"col": 73,
+"row": 75
+},
+{
+"col": 73,
+"row": 76
+},
+{
+"col": 73,
+"row": 77
+},
+{
+"col": 71,
+"row": 73
+},
+{
+"col": 72,
+"row": 73
+},
+{
+"col": 73,
+"row": 73
+},
+{
+"col": 71,
+"row": 72
+},
+{
+"col": 72,
+"row": 72
+},
+{
+"col": 73,
+"row": 72
+},
+{
+"col": 74,
+"row": 72
+},
+{
+"col": 74,
+"row": 73
+},
+{
+"col": 74,
+"row": 74
+},
+{
+"col": 74,
+"row": 75
+},
+{
+"col": 71,
+"row": 71
+},
+{
+"col": 72,
+"row": 71
+},
+{
+"col": 73,
+"row": 71
+},
+{
+"col": 74,
+"row": 71
+},
+{
+"col": 72,
+"row": 70
+},
+{
+"col": 73,
+"row": 70
+},
+{
+"col": 74,
+"row": 70
+},
+{
+"col": 75,
+"row": 70
+},
+{
+"col": 75,
+"row": 71
+},
+{
+"col": 75,
+"row": 72
+},
+{
+"col": 75,
+"row": 73
+},
+{
+"col": 72,
+"row": 69
+},
+{
+"col": 73,
+"row": 69
+},
+{
+"col": 74,
+"row": 69
+},
+{
+"col": 75,
+"row": 69
+},
+{
+"col": 72,
+"row": 68
+},
+{
+"col": 73,
+"row": 68
+},
+{
+"col": 74,
+"row": 68
+},
+{
+"col": 75,
+"row": 68
+},
+{
+"col": 72,
+"row": 67
+},
+{
+"col": 73,
+"row": 67
+},
+{
+"col": 74,
+"row": 67
+},
+{
+"col": 75,
+"row": 67
+},
+{
+"col": 72,
+"row": 66
+},
+{
+"col": 73,
+"row": 66
+},
+{
+"col": 74,
+"row": 66
+},
+{
+"col": 75,
+"row": 66
+},
+{
+"col": 72,
+"row": 65
+},
+{
+"col": 73,
+"row": 65
+},
+{
+"col": 74,
+"row": 65
+},
+{
+"col": 75,
+"row": 65
+},
+{
+"col": 72,
+"row": 64
+},
+{
+"col": 73,
+"row": 64
+},
+{
+"col": 74,
+"row": 64
+},
+{
+"col": 75,
+"row": 64
+},
+{
+"col": 72,
+"row": 63
+},
+{
+"col": 73,
+"row": 63
+},
+{
+"col": 74,
+"row": 63
+},
+{
+"col": 75,
+"row": 63
+},
+{
+"col": 71,
+"row": 61
+},
+{
+"col": 71,
+"row": 62
+},
+{
+"col": 71,
+"row": 63
+},
+{
+"col": 71,
+"row": 64
+},
+{
+"col": 72,
+"row": 61
+},
+{
+"col": 72,
+"row": 62
+},
+{
+"col": 73,
+"row": 61
+},
+{
+"col": 73,
+"row": 62
+},
+{
+"col": 74,
+"row": 61
+},
+{
+"col": 74,
+"row": 62
+},
+{
+"col": 71,
+"row": 60
+},
+{
+"col": 72,
+"row": 60
+},
+{
+"col": 73,
+"row": 60
+},
+{
+"col": 74,
+"row": 60
+},
+{
+"col": 71,
+"row": 59
+},
+{
+"col": 72,
+"row": 59
+},
+{
+"col": 73,
+"row": 59
+},
+{
+"col": 74,
+"row": 59
+},
+{
+"col": 70,
+"row": 71
+},
+{
+"col": 69,
+"row": 70
+},
+{
+"col": 70,
+"row": 70
+},
+{
+"col": 71,
+"row": 70
+},
+{
+"col": 70,
+"row": 69
+},
+{
+"col": 71,
+"row": 69
+},
+{
+"col": 70,
+"row": 68
+},
+{
+"col": 71,
+"row": 68
+},
+{
+"col": 70,
+"row": 67
+},
+{
+"col": 71,
+"row": 67
+},
+{
+"col": 71,
+"row": 66
+},
+{
+"col": 71,
+"row": 65
+},
+{
+"col": 75,
+"row": 62
+}
+]
+},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+],
+"paths": [
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{}
+]
 }
 ]
 }
@@ -45664,7 +50613,7 @@
 }
 ],
 "sid": 12,
-"uid": "O_HOLYOBJ1",
+"uid": "O_HOLYOBJ3",
 "packset": {
 "frames": [
 {
@@ -45944,7 +50893,7 @@
 }
 ],
 "sid": 14,
-"uid": "O_HOLYOBJ3",
+"uid": "O_HOLYOBJ1",
 "packset": {
 "frames": [
 {
@@ -46223,6 +51172,262 @@
 }
 ]
 }
+},
+{
+"object": {
+"bbox": true,
+"maxScale": -1,
+"width": 96,
+"height": 96
+},
+"anims": [
+{
+"name": "STOP",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT",
+"frames": [
+{
+"md5": "cd326119cfcbada34b825741a9e8e866",
+"xtrim": 24,
+"ytrim": 24,
+"wtrim": 44,
+"htrim": 48,
+"xdraw": 22,
+"ydraw": 22,
+"wdraw": 48,
+"hdraw": 52
+},
+{
+"md5": "8f6932c3e9e6b9c02d7e99a454d76ba3",
+"xtrim": 24,
+"ytrim": 24,
+"wtrim": 44,
+"htrim": 48,
+"xdraw": 22,
+"ydraw": 22,
+"wdraw": 48,
+"hdraw": 52
+},
+{
+"md5": "8f6932c3e9e6b9c02d7e99a454d76ba3",
+"xtrim": 24,
+"ytrim": 24,
+"wtrim": 44,
+"htrim": 48,
+"xdraw": 22,
+"ydraw": 22,
+"wdraw": 48,
+"hdraw": 52
+},
+{
+"md5": "cd326119cfcbada34b825741a9e8e866",
+"xtrim": 24,
+"ytrim": 24,
+"wtrim": 44,
+"htrim": 48,
+"xdraw": 22,
+"ydraw": 22,
+"wdraw": 48,
+"hdraw": 52
+}
+],
+"count": 4
+},
+{
+"name": "RIGHT",
+"frames": [
+{
+"md5": "cd326119cfcbada34b825741a9e8e866",
+"xtrim": 28,
+"ytrim": 24,
+"wtrim": 44,
+"htrim": 48,
+"xdraw": 26,
+"ydraw": 22,
+"wdraw": 48,
+"hdraw": 52
+},
+{
+"md5": "8f6932c3e9e6b9c02d7e99a454d76ba3",
+"xtrim": 28,
+"ytrim": 24,
+"wtrim": 44,
+"htrim": 48,
+"xdraw": 26,
+"ydraw": 22,
+"wdraw": 48,
+"hdraw": 52
+},
+{
+"md5": "8f6932c3e9e6b9c02d7e99a454d76ba3",
+"xtrim": 28,
+"ytrim": 24,
+"wtrim": 44,
+"htrim": 48,
+"xdraw": 26,
+"ydraw": 22,
+"wdraw": 48,
+"hdraw": 52
+},
+{
+"md5": "cd326119cfcbada34b825741a9e8e866",
+"xtrim": 28,
+"ytrim": 24,
+"wtrim": 44,
+"htrim": 48,
+"xdraw": 26,
+"ydraw": 22,
+"wdraw": 48,
+"hdraw": 52
+}
+],
+"count": 4
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+],
+"flip": true
+},
+{
+"name": "TALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+},
+{
+"name": "WALK",
+"fps": 6,
+"action": -1,
+"loopRangeMax": -1,
+"dirs": [
+{
+"name": "LEFT"
+},
+{
+"name": "RIGHT"
+},
+{
+"name": "FRONT"
+},
+{
+"name": "BACK"
+},
+{
+"name": "FL"
+},
+{
+"name": "FR"
+},
+{
+"name": "BL"
+},
+{
+"name": "BR"
+}
+]
+}
+],
+"sid": 18,
+"uid": "O_GUARD",
+"packset": {
+"frames": [
+{
+"index2": -1,
+"x": 2,
+"y": 2,
+"w": 44,
+"h": 48
+},
+{
+"index": 2,
+"index2": 1
+},
+{
+"index": 3
+},
+{
+"index": 4,
+"flipped": true
+},
+{
+"index": 5,
+"index2": 1,
+"flipped": true
+},
+{
+"index": 6,
+"index2": 1,
+"flipped": true
+},
+{
+"index": 7,
+"flipped": true
+},
+{
+"pack": 1,
+"index": 1,
+"index2": -1,
+"x": 2,
+"y": 2,
+"w": 44,
+"h": 48
+}
+],
+"packs": [
+{
+"count": 7
+},
+{
+"count": 1
+}
+]
+}
 }
 ],
 "players": [
@@ -46237,7 +51442,7 @@
 }
 ],
 "meta": {
-"nextAssetID": 17
+"nextAssetID": 22
 },
 "cinematics": [
 {
@@ -46272,7 +51477,13 @@
 },
 "speaker": "O_OLD_MAN",
 "lookat": "P_PLAYER",
-"keepDir": true
+"keepDir": true,
+"tags": [
+"intro_old_man",
+"",
+"",
+""
+]
 },
 {
 "id": 10,
@@ -46312,11 +51523,11 @@
 "text": {
 "en": "I'm pretty sure he wont send help, but you can always try, the thing is the brige at the north had collapse, you'll need to cross from another direction, i can tell you another way, but i'll need you to get me back 3 holy relics, thoses are very important and the reason why i didn't left, i heard that the first one was left in the church, my body is too weak, you can try to dig there"
 },
-"mutualShow": "28 54",
 "speaker": "O_OLD_MAN",
 "lookat": "P_PLAYER",
 "onSay": "#parler_avec_le_vielle_homme",
-"keepDir": true
+"keepDir": true,
+"exit": true
 }
 ],
 "text": {
@@ -46337,7 +51548,19 @@
 "text": {
 "en": "goth thank, that was borring as hell"
 },
-"hidden": true
+"sentences": [
+{
+"id": 69,
+"text": {
+"en": "get out of here, you are nothing more an heartless asshole"
+},
+"speaker": "O_OLD_MAN",
+"lookat": "P_PLAYER",
+"exit": true,
+"onSay": "#soyez_mechant_avec_le_vielle_homme",
+"keepDir": true
+}
+]
 }
 ],
 "text": {
@@ -46366,8 +51589,20 @@
 "text": {
 "en": "no sorry, i have a lot in mind, i just came from a village like yours and we are currently under an heavy seige, i have to kickly deliver a missive to the king in hope of help"
 },
-"hidden": true,
-"lookat": "O_OLD_MAN"
+"lookat": "O_OLD_MAN",
+"sentences": [
+{
+"id": 67,
+"text": {
+"en": "I'm pretty sure he wont send help, but you can always try, the thing is the brige at the north had collapse, you'll need to cross from another direction, i can tell you another way, but i'll need you to get me back 3 holy relics, thoses are very important and the reason why i didn't left, i heard that the first one was left in the church, my body is too weak, you can try to dig there"
+},
+"speaker": "O_OLD_MAN",
+"lookat": "P_PLAYER",
+"onSay": "#parler_avec_le_vielle_homme",
+"keepDir": true,
+"exit": true
+}
+]
 },
 {
 "id": 29,
@@ -46375,8 +51610,20 @@
 "text": {
 "en": "yes"
 },
-"hidden": true,
-"lookat": "O_OLD_MAN"
+"lookat": "O_OLD_MAN",
+"sentences": [
+{
+"id": 68,
+"text": {
+"en": "get out of here, you are nothing more an heartless asshole"
+},
+"speaker": "O_OLD_MAN",
+"lookat": "P_PLAYER",
+"exit": true,
+"onSay": "#soyez_mechant_avec_le_vielle_homme",
+"keepDir": true
+}
+]
 }
 ],
 "text": {
@@ -46406,7 +51653,6 @@
 },
 "speaker": "O_OLD_MAN",
 "lookat": "P_PLAYER",
-"mutualShow": "29 34",
 "exit": true,
 "onSay": "#soyez_mechant_avec_le_vielle_homme",
 "keepDir": true
@@ -46452,7 +51698,13 @@
 }
 ],
 "speaker": "P_PLAYER",
-"lookat": "O_OLD_MAN"
+"lookat": "O_OLD_MAN",
+"tags": [
+"Old_man_dialogue_classic",
+"",
+"",
+""
+]
 },
 {
 "id": 39,
@@ -46484,7 +51736,19 @@
 "text": {
 "en": "thank you"
 },
-"hidden": true
+"sentences": [
+{
+"id": 70,
+"text": {
+"en": "I'm pretty sure he wont send help, but you can always try, the thing is the brige at the north had collapse, you'll need to cross from another direction, i can tell you another way, but i'll need you to get me back 3 holy relics, thoses are very important and the reason why i didn't left, i heard that the first one was left in the church, my body is too weak, you can try to dig there"
+},
+"speaker": "O_OLD_MAN",
+"lookat": "P_PLAYER",
+"onSay": "#parler_avec_le_vielle_homme",
+"keepDir": true,
+"exit": true
+}
+]
 }
 ],
 "text": {
@@ -46492,8 +51756,7 @@
 },
 "speaker": "O_OLD_MAN",
 "keepDir": true,
-"lookat": "P_PLAYER",
-"mutualShow": "60"
+"lookat": "P_PLAYER"
 }
 ],
 "text": {
@@ -46513,7 +51776,89 @@
 "text": {
 "en": "you better be, or else..."
 },
-"hidden": true
+"sentences": [
+{
+"id": 78,
+"sentences": [
+{
+"id": 79,
+"choice": true,
+"text": {
+"en": "i'm sorry but i really need your help, i'm in rush due to bandits seiging my village, i have to delivre a missive to the king in hope of help, so please, help me save the peoples of my village"
+},
+"sentences": [
+{
+"id": 80,
+"sentences": [
+{
+"id": 81,
+"choice": true,
+"text": {
+"en": "thank you"
+},
+"sentences": [
+{
+"id": 82,
+"text": {
+"en": "I'm pretty sure he wont send help, but you can always try, the thing is the brige at the north had collapse, you'll need to cross from another direction, i can tell you another way, but i'll need you to get me back 3 holy relics, thoses are very important and the reason why i didn't left, i heard that the first one was left in the church, my body is too weak, you can try to dig there"
+},
+"speaker": "O_OLD_MAN",
+"lookat": "P_PLAYER",
+"onSay": "#parler_avec_le_vielle_homme",
+"keepDir": true,
+"exit": true
+}
+]
+}
+],
+"text": {
+"en": "ok ok"
+},
+"speaker": "O_OLD_MAN",
+"keepDir": true,
+"lookat": "P_PLAYER"
+}
+]
+},
+{
+"id": 83,
+"choice": true,
+"sentences": [
+{
+"id": 84,
+"sentences": [
+{
+"id": 85,
+"choice": true,
+"text": {
+"en": "fine..."
+},
+"lookat": "O_OLD_MAN",
+"onSay": "#parler_avec_le_vielle_homme",
+"exit": true
+}
+],
+"text": {
+"en": "ok ok, calm down, just give me back 3 holy relics and i'll help you, by the way, you cant just go right now, the bridge collapse, but lucky for you, i know another way, do we have a deal ?"
+},
+"speaker": "O_OLD_MAN",
+"keepDir": true,
+"lookat": "P_PLAYER"
+}
+],
+"text": {
+"en": "there is worst things than death..."
+}
+}
+],
+"text": {
+"en": "i'm already old, why should i be scared ? if you dont kill me, aging will in probably less than 3 years"
+},
+"speaker": "O_OLD_MAN",
+"keepDir": true,
+"lookat": "P_PLAYER"
+}
+]
 }
 ],
 "text": {
@@ -46546,7 +51891,39 @@
 "text": {
 "en": "i'm sorry but i really need your help, i'm in rush due to bandits seiging my village, i have to delivre a missive to the king in hope of help, so please, help me save the peoples of my village"
 },
-"hidden": true
+"sentences": [
+{
+"id": 71,
+"sentences": [
+{
+"id": 72,
+"choice": true,
+"text": {
+"en": "thank you"
+},
+"sentences": [
+{
+"id": 73,
+"text": {
+"en": "I'm pretty sure he wont send help, but you can always try, the thing is the brige at the north had collapse, you'll need to cross from another direction, i can tell you another way, but i'll need you to get me back 3 holy relics, thoses are very important and the reason why i didn't left, i heard that the first one was left in the church, my body is too weak, you can try to dig there"
+},
+"speaker": "O_OLD_MAN",
+"lookat": "P_PLAYER",
+"onSay": "#parler_avec_le_vielle_homme",
+"keepDir": true,
+"exit": true
+}
+]
+}
+],
+"text": {
+"en": "ok ok"
+},
+"speaker": "O_OLD_MAN",
+"keepDir": true,
+"lookat": "P_PLAYER"
+}
+]
 },
 {
 "id": 62,
@@ -46562,11 +51939,12 @@
 "en": "fine..."
 },
 "lookat": "O_OLD_MAN",
-"onSay": "#parler_avec_le_vielle_homme"
+"onSay": "#parler_avec_le_vielle_homme",
+"exit": true
 }
 ],
 "text": {
-"en": "ok ok, calm down, just give me back 3 holy relics and i'll help you, by the way, you cant just go right now, the bridge collapse, but lucky for you, i know another way, do we have a deal ?"
+"en": "ok ok, calm down, just give me back 3 holy relics and i'll help you, by the way, you cant just go right now, the bridge collapse, but lucky for you, i know a way around, do we have a deal ?"
 },
 "speaker": "O_OLD_MAN",
 "keepDir": true,
@@ -46583,8 +51961,7 @@
 },
 "speaker": "O_OLD_MAN",
 "keepDir": true,
-"lookat": "P_PLAYER",
-"mutualShow": "57"
+"lookat": "P_PLAYER"
 }
 ],
 "text": {
@@ -46617,11 +51994,283 @@
 "en": "sorry but i dont know where is the exit"
 },
 "speaker": "P_PLAYER",
+"lookat": "O_OLD_MAN",
+"tags": [
+"Old_man_dialogue_mad",
+"",
+"",
+""
+]
+},
+{
+"id": 87,
+"sentences": [
+{
+"id": 91,
+"text": {
+"en": "Thank, i heard that the second one might be in an house somewhere in the west of the village, sorry, i dont have more infos about it"
+},
+"speaker": "O_OLD_MAN",
+"lookat": "P_PLAYER",
+"exit": true
+}
+],
+"text": {
+"en": "Here is the first item"
+},
+"tags": [
+"old_man_first_item_classic",
+"",
+"",
+""
+],
+"speaker": "O_OLD_MAN",
 "lookat": "O_OLD_MAN"
+},
+{
+"id": 92,
+"sentences": [
+{
+"id": 93,
+"text": {
+"en": "Cool, now go get the second one"
+},
+"speaker": "O_OLD_MAN",
+"lookat": "P_PLAYER",
+"exit": true
+}
+],
+"text": {
+"en": "Here is the first item"
+},
+"tags": [
+"old_man_first_item_mad",
+"",
+"",
+""
+],
+"speaker": "O_OLD_MAN",
+"lookat": "O_OLD_MAN"
+},
+{
+"id": 95,
+"sentences": [
+{
+"id": 97,
+"text": {
+"en": "Very well, the last is keept by a guard, but i dont know were he is or even if he still alive, it might take long"
+},
+"speaker": "O_OLD_MAN",
+"lookat": "P_PLAYER",
+"keepDir": true,
+"exit": true
+}
+],
+"text": {
+"en": "I found the second one"
+},
+"tags": [
+"old_man_second_item_classic",
+"",
+"",
+""
+],
+"speaker": "O_OLD_MAN",
+"lookat": "O_OLD_MAN"
+},
+{
+"id": 98,
+"sentences": [
+{
+"id": 99,
+"text": {
+"en": "Go found the last one and leave"
+},
+"speaker": "O_OLD_MAN",
+"lookat": "P_PLAYER",
+"keepDir": true,
+"exit": true
+}
+],
+"text": {
+"en": "I found the second one"
+},
+"tags": [
+"old_man_second_item_mad",
+"",
+"",
+""
+],
+"speaker": "O_OLD_MAN",
+"lookat": "O_OLD_MAN"
+},
+{
+"id": 100,
+"sentences": [
+{
+"id": 101,
+"text": {
+"en": "Thank you, you really saved me, so as promest i'll tell you where to go, you are looking to reach the king, but for that, you'll need to go trough the VALNOIR forest at the north, but be carfull, some says the forest is haunted, bye young one and good luck"
+},
+"speaker": "O_OLD_MAN",
+"lookat": "P_PLAYER",
+"exit": true
+}
+],
+"text": {
+"en": "Here is the last one"
+},
+"tags": [
+"old_man_third_item_classic",
+"",
+"",
+""
+],
+"speaker": "P_PLAYER",
+"lookat": "O_OLD_MAN"
+},
+{
+"id": 102,
+"sentences": [
+{
+"id": 103,
+"text": {
+"en": "ok, just go north trough the deep forest..."
+},
+"speaker": "O_OLD_MAN",
+"sentences": [
+{
+"id": 104,
+"text": {
+"en": "what are you waiting ? a \"good luck ?\" just leave already"
+},
+"exit": true,
+"speaker": "O_OLD_MAN",
+"lookat": "P_PLAYER"
+}
+],
+"lookat": "P_PLAYER"
+}
+],
+"text": {
+"en": "Here is the last one"
+},
+"speaker": "P_PLAYER",
+"lookat": "O_OLD_MAN",
+"tags": [
+"old_man_third_item_mad",
+"",
+"",
+""
+]
 }
 ]
 },
-"nextID": 66
+"nextID": 105
+}
+},
+{
+"sid": 17,
+"uid": "D_PLAYER",
+"dialog": {
+"sentence": {
+"sentences": [
+{
+"id": 3,
+"text": {
+"en": "I should take that back to the old man"
+},
+"tags": [
+"holyObjectAquired",
+"",
+"",
+""
+],
+"speaker": "P_PLAYER",
+"exit": true
+}
+]
+},
+"nextID": 4
+}
+},
+{
+"sid": 19,
+"uid": "D_GUARD",
+"dialog": {
+"sentence": {
+"sentences": [
+{
+"id": 4,
+"text": {
+"en": "What do you want ?"
+},
+"sentences": [
+{
+"id": 5,
+"choice": true,
+"text": {
+"en": "I just want to pass"
+},
+"sentences": [
+{
+"id": 8,
+"text": {
+"en": "There is nothing left here, go back were you're from"
+},
+"speaker": "O_GUARD",
+"lookat": "P_PLAYER",
+"exit": true,
+"keepDir": true
+}
+]
+}
+],
+"speaker": "O_GUARD",
+"lookat": "P_PLAYER"
+},
+{
+"id": 10,
+"sentences": [
+{
+"id": 12,
+"sentences": [
+{
+"id": 14,
+"sentences": [
+{
+"id": 16,
+"text": {
+"en": "i know pretty well this old man, in fact, i have the relic you're looking for, my goal was to protect it, but i failed at protection this village, so how can i protect that relic, here, take it and give it to him"
+},
+"speaker": "O_GUARD",
+"lookat": "P_PLAYER",
+"exit": true
+}
+],
+"text": {
+"en": "it manage to be my exit ticket, i need to gave it back to an old man so he tell where should i pass to reach my destination"
+},
+"speaker": "P_PLAYER",
+"lookat": "O_GUARD"
+}
+],
+"text": {
+"en": "i know where it is, but why do you need it ?"
+},
+"speaker": "O_GUARD",
+"lookat": "P_PLAYER"
+}
+],
+"text": {
+"en": "hi, i'm looking for a relic, i heard that it was around here"
+},
+"speaker": "P_PLAYER",
+"lookat": "O_GUARD"
+}
+]
+},
+"nextID": 17
 }
 }
 ]
